@@ -1,0 +1,48 @@
+.div1{
+  background-image: url("../../assets/img/brand/icon.png");
+  float: left;
+  width: 90px;
+  height: 90px;
+  border-radius: 1px;
+  border-style: solid;
+  border-radius: 1px;
+  background-color: white;
+  border-color: #6c6c70;
+  border-radius: 4px;
+  margin-right: 15px;
+
+}
+.div2{
+ float: left;  
+ 
+}
+.div3{
+    float: left;
+    background-color: #FFF4E8;
+    border-style: solid;
+    border-color:  #FFF4E8  #FFF4E8  #FFF4E8  #FFAE6F ;
+    border-width: 4px;
+    border-radius: 4px;
+    width:90%;
+    margin-top: 30px;
+    height: 120px;
+}
+.main{
+    background-color: white;
+    float: left;
+}
+lowdiv{
+    display: flex;
+}
+.chart{
+    border-style: solid;
+    border-width: 2px;
+    width:"50%";
+  
+    
+
+}
+.chart p{
+    font-size: 15px;
+}
+

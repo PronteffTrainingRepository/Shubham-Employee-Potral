@@ -12,10 +12,13 @@ export default {
     {
       name: "Profile",
       url: "/profile",
-      icon: "profile",
-     
+      icon: "icon-people",
     },
-
+    {
+      name: "PaySlips",
+      url: "/payslips",
+      icon: "Pay Slips",
+    },
     {
       title: true,
       name: "Extras",

@@ -2,6 +2,7 @@ import React, { Component, lazy, Suspense } from "react";
 import plogo from "../../assets/img/brand/plogo.png";
 import pic from "../../assets/img/brand/pic.jpg";
 import { BsPencilSquare } from "react-icons/bs";
+import { TiLocationArrow } from "react-icons/ti";
 import {
   Badge,
   Button,
@@ -11,6 +12,7 @@ import {
   CardHeader,
   CardTitle,
   Col,
+  Collapse,
   Row,
   Table,
   CardText,
@@ -26,7 +28,13 @@ class Dashboard extends Component {
     this.onImageChange = this.onImageChange.bind(this);
     this.state = {
       img: plogo,
+      showone: false,
+      showtwo: false,
+      showthree: false,
     };
+    this.ContentOne = this.ContentOne.bind(this);
+    this.ContentTwo = this.ContentTwo.bind(this);
+    this.ContentThree = this.ContentThree.bind(this);
   }
   handleClick(event) {
     document.getElementById("myimg").click();
@@ -39,7 +47,18 @@ class Dashboard extends Component {
       });
     }
   };
-
+  ContentOne = () => {
+    const { showone } = this.state;
+    this.setState({ showone: !showone });
+  };
+  ContentTwo = () => {
+    const { showtwo } = this.state;
+    this.setState({ showtwo: !showtwo });
+  };
+  ContentThree = () => {
+    const { showthree } = this.state;
+    this.setState({ showthree: !showthree });
+  };
   render() {
     return (
       <div>
@@ -154,6 +173,7 @@ class Dashboard extends Component {
             </CardText>
           </CardBody>
         </Card>
+        {/* Upper Card Ends */}
         <div
           style={{
             paddingTop: "120px",
@@ -164,56 +184,57 @@ class Dashboard extends Component {
             alignItems: "center",
           }}
         >
-          <Card style={{ width: "30%", marginRight: "15px" }}>
-            <CardBody>
+          {/* Lower left Started  */}
+          <Card className="l1" style={{ width: "30%", marginRight: "15px" }}>
+            <div>
               <h2>Tech Stack</h2>
-              <h4>Experience in</h4>
-            </CardBody>
-            <CardBody
-              
-            >
-              <Row>
-                <Col xs="2">
-                  <Button style={{ width: "50px", fontSize: "10px" }}>
-                    Linux
-                  </Button>
-                </Col>
-                <Col xs="4">
-                  <Button
-                    style={{
-                      width: "70px",
-                      fontSize: "10px",
-                     
-                    }}
-                  >
-                    Windows
-                  </Button>
-                </Col>
-                <Col xs="2">
-                  <Button style={{ width: "50px", fontSize: "10px" }}>
-                    IOS
-                  </Button>
-                </Col>
-                <Col xs="4">
-                  <Button style={{ width: "70px", fontSize: "10px" }}>
-                    Andriod
-                  </Button>
-                </Col>
-              </Row>
-            </CardBody>
+              <h4>Worked Projects</h4>
+            </div>
+            <div style={{ display: "inline", justifyContent: "space-between" }}>
+              <Button style={{ color: "white" }}>IBM</Button>
+              <Button style={{ color: "white" }}>Facebook</Button>
+              <Button style={{ color: "white" }}>AI</Button>
+              <Button style={{ color: "white" }}>Google</Button>
+            </div>
+            <div>
+              <h6>Known Technologies</h6>
+              <Button style={{ color: "white" }}>Reactjs</Button>
+              <Button style={{ color: "white" }}>Nodejs</Button>
+              <Button style={{ color: "white" }}>Native</Button>
+              <Button style={{ color: "white" }}>JAVA</Button>
+            </div>
+            <div>
+              <h6>Known Languages</h6>
+              <Button style={{ color: "white" }}>English</Button>
+              <Button style={{ color: "white" }}>Hindi</Button>
+              <Button style={{ color: "white" }}>Punjabi</Button>
+              <Button style={{ color: "white", fontSize: "13.1px" }}>
+                Telegu
+              </Button>
+            </div>
+            {/* <CardBody>
+              <h2>Languages</h2>
+
+              <h6>Professional Working Proficiency in</h6>
+              <h5>English And French</h5>
+            </CardBody> */}
           </Card>
+          {/* Lower Right Card Starts */}
           <Card
+            className="l2"
             style={{
               width: "70%",
               paddingLeft: "15px",
               backgroundColor: "#EFEEF3    ",
             }}
           >
-            <CardBody style={{ paddingTop: "20px" }}>
-              <h4 style={{ color: "#6E4EE4" }}>General Informations</h4>
+            <CardBody style={{ paddingTop: "40px" }}>
+              <h3 style={{ color: "#6E4EE4", opacity: "0.8" }}>
+                General Informations
+              </h3>
               <ul>
                 <li>
-                  <h2>Work Experience</h2>
+                  <h1 style={{ opacity: "0.9" }}>Work Experience</h1>
                 </li>
               </ul>
             </CardBody>
@@ -226,9 +247,10 @@ class Dashboard extends Component {
                       width: "100%",
                       color: "white",
                       backgroundColor: "#6E4EE4",
+                      fontSize: "21px",
                     }}
                   >
-                    4 Jobs Occupied
+                    4 Projects <br></br>Occupied
                   </Button>
                 </Col>
                 <Col xs="4">
@@ -238,6 +260,7 @@ class Dashboard extends Component {
                       width: "100%",
                       color: "white",
                       backgroundColor: "#6E4EE4",
+                      fontSize: "21px",
                     }}
                   >
                     3 years<br></br>Experience
@@ -250,9 +273,10 @@ class Dashboard extends Component {
                       width: "100%",
                       color: "white",
                       backgroundColor: "#6E4EE4",
+                      fontSize: "21px",
                     }}
                   >
-                    32 Worked Months
+                    2 Projects Completed
                   </Button>
                 </Col>
               </Row>
@@ -260,51 +284,101 @@ class Dashboard extends Component {
             <Card style={{ marginRight: "15px" }}>
               <CardBody>
                 <CardTitle>
-                  <h2>VMWare Infrastructure Manager</h2>
+                  <h2 style={{ opacity: "0.9" }}>Update Safety Check</h2>
                 </CardTitle>
-                <h3 style={{ color: "#6E4EE4" }}>KNET</h3>
-                <CardSubtitle>April 2017-Present-1yrs 2mo</CardSubtitle>
-                <CardText>
+                <h3
+                  style={{
+                    color: "#6E4EE4",
+                    opacity: "0.8",
+                  }}
+                >
+                  Facebook
+                </h3>
+                <CardSubtitle style={{ opacity: "0.6" }}>
+                  April 2017-Present-1yrs 2mo{" "}
+                  <span style={{ paddingLeft: "300px" }}>
+                    <TiLocationArrow />
+                    San francisco,USA
+                  </span>
+                </CardSubtitle>
+                <CardText style={{ opacity: "0.6", paddingTop: "20px" }}>
                   Led efforts to architect deploy and manage the underlying
                   VMWare infrastructure
                   <br></br>{" "}
-                  <a href="#" style={{ textDecoration: "underline" }}>
+                  <p
+                    onClick={this.ContentOne}
+                    style={{
+                      backgroundColor: "white",
+                      textDecoration: "underline",
+                      textAlign: "left",
+                    }}
+                  >
                     More
-                  </a>
+                  </p>
+                  {this.state.showone && <BoxOne />}
                 </CardText>
-                <br></br>
-                <hr></hr>
               </CardBody>
+              <br></br>
+              <hr></hr>
               <CardBody>
                 <CardTitle>
-                  <h2>Software Engineer Java/JEE</h2>
+                  <h2 style={{ opacity: "0.9" }}>Glass Enterprise Edition</h2>
                 </CardTitle>
-                <h3 style={{ color: "#6E4EE4" }}>PAYCOST</h3>
-                <CardSubtitle>April 2017-Present-1yrs 2mo</CardSubtitle>
-                <CardText>
+                <h3 style={{ color: "#6E4EE4", opacity: "0.8" }}>Google</h3>
+
+                <CardSubtitle style={{ opacity: "0.6" }}>
+                  April 2017-Present-1yrs 2mo{" "}
+                  <span style={{ paddingLeft: "300px" }}>
+                    <TiLocationArrow />
+                    San francisco,USA
+                  </span>
+                </CardSubtitle>
+                <CardText style={{ opacity: "0.6", paddingTop: "20px" }}>
                   Led efforts to architect deploy and manage the underlying
                   VMWare infrastructure
                   <br></br>{" "}
-                  <a href="#" style={{ textDecoration: "underline" }}>
+                  <p
+                    onClick={this.Content}
+                    style={{
+                      backgroundColor: "white",
+                      textDecoration: "underline",
+                      textAlign: "left",
+                    }}
+                  >
                     More
-                  </a>
+                  </p>
+                  {this.state.showtwo && <BoxTwo/>}
                 </CardText>
-                <br></br>
-                <hr></hr>
               </CardBody>
+              <br></br>
+              <hr></hr>
               <CardBody>
                 <CardTitle>
-                  <h2>VMWare Infrastructure Manager</h2>
+                  <h2 style={{ opacity: "0.9" }}>eGovernance projects</h2>
                 </CardTitle>
-                <h3 style={{ color: "#6E4EE4" }}>KNET</h3>
-                <CardSubtitle>April 2017-Present-1yrs 2mo</CardSubtitle>
-                <CardText>
+                <h3 style={{ color: "#6E4EE4", opacity: "0.8" }}>TCS</h3>
+                <CardSubtitle style={{ opacity: "0.6" }}>
+                  April 2017-Present-1yrs 2mo{" "}
+                  <span style={{ paddingLeft: "320px" }}>
+                    <TiLocationArrow />
+                    Mumbai,India
+                  </span>
+                </CardSubtitle>
+                <CardText style={{ opacity: "0.6", paddingTop: "30px" }}>
                   Led efforts to architect deploy and manage the underlying
                   VMWare infrastructure
                   <br></br>{" "}
-                  <a href="#" style={{ textDecoration: "underline" }}>
+                  <p
+                    onClick={this.Content}
+                    style={{
+                      backgroundColor: "white",
+                      textDecoration: "underline",
+                      textAlign: "left",
+                    }}
+                  >
                     More
-                  </a>
+                  </p>
+                  {this.state.showthree && <BoxThree/>}
                 </CardText>
               </CardBody>
             </Card>
@@ -312,6 +386,21 @@ class Dashboard extends Component {
         </div>
       </div>
     );
+  }
+}
+class BoxOne extends Component {
+  render() {
+    return <p>Some text 1</p>;
+  }
+}
+class BoxTwo extends Component {
+  render() {
+    return <p>Some text 2</p>;
+  }
+}
+class BoxThree extends Component {
+  render() {
+    return <p>Some text 3</p>;
   }
 }
 

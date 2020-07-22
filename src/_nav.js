@@ -3,10 +3,10 @@ export default {
     {
       name: "Dashboard",
       url: "/dashboard",
-      icon: "icon-speedometer",
+      icon: "icon-bag",
       badge: {
         variant: "info",
-        text: "NEW",
+        text: "INFO",
       },
     },
     {
@@ -15,9 +15,14 @@ export default {
       icon: "icon-people",
     },
     {
-      name: "PaySlips",
+      name: "Pay Slips",
       url: "/payslips",
-      icon: "Pay Slips",
+      icon: "icon-wallet",
+    },
+    {
+      name: "Feed",
+      url: "/feed",
+      icon: "icon-feed",
     },
     {
       title: true,

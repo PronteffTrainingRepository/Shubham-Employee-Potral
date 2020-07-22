@@ -338,7 +338,7 @@ class Dashboard extends Component {
                   VMWare infrastructure
                   <br></br>{" "}
                   <p
-                    onClick={this.Content}
+                    onClick={this.ContentTwo}
                     style={{
                       backgroundColor: "white",
                       textDecoration: "underline",
@@ -369,7 +369,7 @@ class Dashboard extends Component {
                   VMWare infrastructure
                   <br></br>{" "}
                   <p
-                    onClick={this.Content}
+                    onClick={this.ContentThree}
                     style={{
                       backgroundColor: "white",
                       textDecoration: "underline",
@@ -390,17 +390,62 @@ class Dashboard extends Component {
 }
 class BoxOne extends Component {
   render() {
-    return <p>Some text 1</p>;
+    return (
+      <p style={{ fontSize: "18px" }}>
+        <b>
+        Facebook’s “Safety Check” feature first appeared in 2011 after a tsunami
+        and nuclear disaster in Tokyo. The tool was established to allow users
+        to connect with loved ones during a natural disaster. However, after the
+        attacks in Paris last week, the service will be extended to human
+        disasters as well. “Many people have rightfully asked why we turned on
+        Safety Check for Paris but not for bombings in Beirut and other places,”
+        Zuckerberg wrote in a post on Facebook last week. “Until yesterday, our
+        policy was only to activate Safety Check for natural disasters. We just
+        changed this and now plan to activate Safety Check for more human
+        disasters going forward as well.”
+          </b>
+      </p>
+    );
   }
 }
 class BoxTwo extends Component {
   render() {
-    return <p>Some text 2</p>;
+    return (
+      <p style={{ fontSize: "18px" }}>
+        <b>
+          Though the company’s first stab at Google Glass proved that we weren’t
+          quite ready to wear computers on our faces in casual social settings,
+          the Moonshot factory is currently working on Glass Enterprise Edition,
+          designed with manufacturing and outdoor workers in mind. The idea is
+          that Glass can be clipped onto safety goggles or shields, so if
+          something needs to be repaired, for example, workers can use the
+          display to read directions.
+        </b>
+      </p>
+    );
   }
 }
 class BoxThree extends Component {
   render() {
-    return <p>Some text 3</p>;
+    return (
+      <p style={{ fontSize: "18px" }}>
+        <b>
+        Mistry, who is also Chairman of the over $100-billion Tata Group, told
+        shareholders at the 19th Annual General Meeting of TCS here that the
+        company is looking into the appointment of a woman director on its
+        board."TCS is involved in a number of e-governance projects in India and
+        abroad. They can help curb corruption," he told shareholders here. He
+        added that the city-headquartered firm will take up the issue of setting
+        up new research and development (R AND D) centres when the business
+        requirement happens.On appointment of woman director, he said: "The
+        nomination committee is looking into the appointment of a lady
+        director."The Companies Act, 2013, which came into effect in April,
+        2014, prescribes that every listed firm and every public company with a
+        paid-up share capital of Rs100 crore and above or turnover of Rs300
+        crore and above should appoint at least one woman director.
+          </b>
+      </p>
+    );
   }
 }
 
